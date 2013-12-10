@@ -1,6 +1,5 @@
 class Edict < ActiveRecord::Base
-  extended FriendlyId
-
+  extend FriendlyId
   friendly_id :name, use: :slugged
 
   mount_uploader :file, FileUploader
