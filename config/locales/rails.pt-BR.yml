@@ -208,14 +208,22 @@ pt-BR:
       <<: *errors
   activerecord:
     models:
-        edict: "Editais"
-       # college: "Escola"
+        edict:
+            one: "Edital"
+            other: "Editais"
+        college: "Campus"
+        role: "Regras"
     attributes:
         edict:
              start: "Inicio"
              name: "Nome"
              end: "Fim"
              file: "Arquivo"
-          # will translate User attribute "login" as "Handle"
+        college:
+             name: "Nome"
+             acronym: "Sigla"
+        role:
+             name: "Nome"
+             # will translate User attribute "login" as "Handle"
     errors:
       <<: *errors

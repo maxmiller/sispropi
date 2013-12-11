@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131210194626) do
+ActiveRecord::Schema.define(version: 20131211221730) do
+
+  create_table "colleges", force: true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "edicts", force: true do |t|
     t.string   "name"
@@ -42,10 +50,12 @@ ActiveRecord::Schema.define(version: 20131210194626) do
     t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+  add_index "roles", ["slug"], name: "index_roles_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

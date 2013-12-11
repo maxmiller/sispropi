@@ -2,7 +2,6 @@
 <module type="RUBY_MODULE" version="4">
   <component name="CompassSettings">
     <option name="compassExecutableFilePath" value="C:/jruby-1.7.8/lib/ruby/gems/shared/gems/compass-0.12.2/bin/compass" />
-    <option name="compassSupportEnabled" value="true" />
   </component>
   <component name="FacetManager">
     <facet type="RailsFacetType" name="Ruby on Rails">
