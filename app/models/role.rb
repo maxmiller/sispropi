@@ -6,4 +6,6 @@ class Role < ActiveRecord::Base
   belongs_to :resource, :polymorphic => true
   
   scopify
+
+  validates_presence_of :name
 end
