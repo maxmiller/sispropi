@@ -213,6 +213,7 @@ pt-BR:
             other: "Editais"
         college: "Campus"
         role: "Regras"
+        user: "Usuarios"
     attributes:
         edict:
              start: "Inicio"
@@ -224,6 +225,10 @@ pt-BR:
              acronym: "Sigla"
         role:
              name: "Nome"
+        user:
+             name: "Nome"
+             code: "Matricula"
+             encrypted_password: "Senha"
              # will translate User attribute "login" as "Handle"
     errors:
       <<: *errors
