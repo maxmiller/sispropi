@@ -1,4 +1,6 @@
 Sispropi::Application.routes.draw do
+  resources :students
+
   resources :colleges
 
   resources :edicts

@@ -229,6 +229,7 @@ pt-BR:
              name: "Nome"
              code: "Matricula"
              encrypted_password: "Senha"
+             roles: "Perfil"
              # will translate User attribute "login" as "Handle"
     errors:
       <<: *errors

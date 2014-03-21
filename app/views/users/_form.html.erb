@@ -8,28 +8,37 @@
     </div>
 
     <div class="control-group">
-    <%= f.label :email, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :email, :class => 'text_field' %>
+      <%= f.label :email, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :email, :class => 'text_field' %>
+      </div>
     </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :encrypted_password, :class => 'control-label' %>
-    <div class="controls">
-      <%= password_field_tag(:encrypted_password, nil , class: 'text_field') %>
+    <div class="control-group">
+      <%= f.label :encrypted_password, :class => 'control-label' %>
+      <div class="controls">
+        <%= password_field_tag(:encrypted_password, nil , class: 'text_field') %>
+      </div>
     </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :code, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :code, :class => 'text_field' %>
+    <div class="control-group">
+      <%= f.label :code, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :code, :class => 'text_field' %>
+      </div>
     </div>
-  </div>
+    <div class="control-group">
+      <%= f.label :roles, :class => 'control-label' %>
+      <div class="controls">
+        <% for role in Role.all %>
 
+            <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+            <%= role.name %>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                users_path, :class => 'btn' %>
-  </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  users_path, :class => 'btn' %>
+    </div>
 <% end %>

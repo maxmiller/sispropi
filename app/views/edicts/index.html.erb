@@ -1,6 +1,6 @@
 <%- model_class = Edict -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Editais</h1>
 </div>
 <table class="table table-striped">
   <thead>
@@ -21,7 +21,7 @@
         <td><%= edict.name %></td>
         <td><%= edict.start %></td>
         <td><%= edict.end %></td>
-        <td><%= edict.file %></td>
+        <td><a href="<%= edict.file %>"> <%= edict.file.file.filename%> </a></td>
 
 
         <td>
